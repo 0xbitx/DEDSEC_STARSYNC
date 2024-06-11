@@ -9,18 +9,6 @@
   <b>An effective tool for hacking starlink wifi password.</b>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/python-3.11.x-brightgreen.svg" alt="version" />
-&nbsp;
-      <img src="https://img.shields.io/badge/qutebrowser-2.5.4-brightgreen.svg" alt="version" />
-  &nbsp;
-  <a href="https://github.com/0xbitx/DEDSEC-XICOMAP.git">
-    <img src="https://img.shields.io/npm/dm/repo-checklist" alt="downloads" />
-  </a>
-</p>
-
-![split](https://github.com/terkelg/prompts/raw/master/media/split.png)
-
 ### DESCRIPTION
 DEDSEC_STARSYNC is a CLI-based tool designed to capture Starlink WiFi passwords using an advanced custom update page. The tool can disconnect all Starlink clients, prompting them to connect to a fake clone of the target WiFi network. Upon connection, a message will appear, instructing users to update their Starlink system. The update process will request the WiFi password to proceed, allowing the tool to capture the credentials.
 

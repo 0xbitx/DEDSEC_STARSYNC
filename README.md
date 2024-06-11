@@ -26,6 +26,7 @@ DEDSEC_STARSYNC is a CLI-based tool designed to capture Starlink WiFi passwords 
     * git clone https://github.com/0xbitx/DEDSEC_STARSYNC.git
     * cd DEDSEC_STARSYNC
     * sudo apt install xterm hostapd dnsmasq
+    * sudo pip3 install tabulate pyudev
     * chmod +x dedsec_starsync
     * sudo ./dedsec_starsync
 

@@ -24,6 +24,7 @@ DEDSEC_STARSYNC is a CLI-based tool designed to capture Starlink WiFi passwords 
 | :-------- | ------------------------- |
 | 1. deauth | Disconnect all starlink client |
 | 2. advanced template | A highly functional and visually appealing custom template tailored specifically for starlink. |
+| 2. realistic Error | A realistic error message both for router and dish. |
 
 ## INSTALLATION 
     * git clone https://github.com/0xbitx/DEDSEC_STARSYNC.git

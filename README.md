@@ -33,11 +33,17 @@ DEDSEC_STARSYNC is a CLI-based tool designed to capture Starlink WiFi passwords 
     * sudo pip3 install tabulate pyudev
     * chmod +x dedsec_starsync
     * sudo ./dedsec_starsync
+  
+> [!IMPORTANT]  
+> You need 2 WiFi adapters that support monitor mode, AP mode, and packet injection.
 
 ### TESTED ON FOLLOWING
 * Kali Linux 
 * Parrot OS 
 * Ubuntu
+
+## License
+This project is licensed under the [MIT License](LICENSE).
 
 ## Support
 

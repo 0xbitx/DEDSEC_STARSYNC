@@ -15,7 +15,7 @@ DEDSEC_STARSYNC is a CLI-based tool designed to capture Starlink WiFi passwords 
 
 <h3 align="center"> TOOL BANNER </h3>
 <p align="center">
-<img src="https://github.com/0xbitx/DEDSEC_STARSYNC/assets/74537225/6177d50e-cc1e-4930-934a-7df82744f983", width="900", height="900">
+<img src="https://github.com/user-attachments/assets/3da1414b-17bc-4571-a3ca-15d383772b8b", width="500", height="500">
 </p>
 
 ## Key Features
